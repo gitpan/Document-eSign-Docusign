@@ -10,7 +10,7 @@ Document::eSign::Docusign::login - Handles the login to Docusign. Should not be 
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 

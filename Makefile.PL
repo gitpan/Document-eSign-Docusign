@@ -18,8 +18,11 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PREREQ_PM => {
-        #'ABC'              => 1.6,
-        #'Foo::Bar::Module' => 5.0401,
+	JSON => 0,
+	LWP::UserAgent => 0,
+	HTTP::Headers  => 0,
+	XML::LibXML    => 0,
+	
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Document-eSign-Docusign-*' },

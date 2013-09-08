@@ -10,7 +10,7 @@ Document::eSign::Docusign::updatePassword - Used to change a user's password.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 

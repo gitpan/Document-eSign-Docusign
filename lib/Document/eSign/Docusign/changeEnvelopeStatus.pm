@@ -10,7 +10,7 @@ Document::eSign::Docusign::changeEnvelopeStatus - Changes an envelope status.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 

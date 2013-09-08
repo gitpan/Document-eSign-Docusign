@@ -10,11 +10,11 @@ Document::eSign::Docusign - Provides an interface for Perl to the Docusign REST 
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our @apicalls = qw{
     login                           updatePassword
     getToken                        getTokenOnBehalfOf

@@ -12,13 +12,13 @@ Document::eSign::Docusign::buildCredentials - Builds the credentials object.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 functions
 
 =head2 new($parent)
 
-Builds an XML or JSON login string for the Docusign header. Settings "usejsononly" in the constructor determines this behavior.
+Builds an XML or JSON login string for the Docusign header. Setting "usejsononly" to a non-undef (null) in the constructor determines this behavior.
 
 =cut
 
@@ -39,6 +39,7 @@ sub new {
                 Username => $main->username,
                 Password => $main->password,
                 IntegratorKey => $main->IntegratorKey,
+                usejsononly => 1
             }
         ));
         return $main->authxml;

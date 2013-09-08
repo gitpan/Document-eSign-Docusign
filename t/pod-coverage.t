@@ -16,5 +16,5 @@ my $min_pc = 0.18;
 eval "use Pod::Coverage $min_pc";
 plan skip_all => "Pod::Coverage $min_pc required for testing POD coverage"
     if $@;
-
-all_pod_coverage_ok();
+my $trustme = { trustme => [qr/^(new|_)/] };
+all_pod_coverage_ok($trustme);

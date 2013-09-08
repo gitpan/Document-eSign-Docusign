@@ -9,11 +9,11 @@ use Data::Dumper;
 
 =head1 NAME
 
-Document::eSign::Docusign::sendRequest - Provides an interface for Perl to the Docusign REST API.
+Document::eSign::Docusign::sendRequest - Handles communication with DocuSign
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 functions
 
@@ -45,6 +45,7 @@ sub new {
     
   $ua->add_handler("request_send",  sub { shift->dump; return })
     if $main->debug;
+    
   $ua->add_handler("response_done", sub { shift->dump; return })
     if $main->debug;
   
@@ -115,11 +116,10 @@ EOF
         return { error => "An undefined method was used, only use GET, POST, PUT, or DELETE"};
     }
     
-    if ( $method =~ /GET|POST/ && $response->is_success ) {
-        
+    if ( $method =~ /GET|POST/ && $response->is_success ) {    
         return $json->decode($response->decoded_content);
     }
-    elsif ( $response->is_success ) {
+    elsif ( $response->is_success ) { #Calls that simply do something and are not expected to return data.
         return { Status => $response->status_line };
     }
     

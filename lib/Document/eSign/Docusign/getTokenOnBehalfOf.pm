@@ -10,7 +10,7 @@ Document::eSign::Docusign::getTokenOnBehalfOf - Retrieves an OAUTH2 token on beh
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
